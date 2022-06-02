@@ -12,4 +12,4 @@ my_file = pandas.read_csv("https://uni-lab-files.s3.us-west-2.amazonaws.com/dabw
 fruit_selected=streamlit.multiselect("Pick Some Fruits:",list(my_file.index),['Avocado','Strawberries'])
 fruit_to_show=my_file.loc[fruit_selected]
 #streamlit.multiselect("Pick Some Fruits:",list(my_file.Fruit))
-streamlit.dataframe(my_file)
+streamlit.dataframe(fruit_to_show)
