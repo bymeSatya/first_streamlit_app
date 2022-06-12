@@ -18,7 +18,7 @@ streamlit.dataframe(fruit_to_show)
 
 
 streamlit.title('Fruityvice Fruit Advice')
-fruit_choice = streamlit.text_input("What Fruit would you like to Informaton About ?")
+fruit_choice = streamlit.text_input('What Fruit would you like to Informaton About ?')
 streamlit.write('The User Entered',fruit_choice)
 fruity_responce=requests.get("https://fruityvice.com/api/fruit/"+fruit_choice)
 #streamlit.text(fruity_responce.json())
