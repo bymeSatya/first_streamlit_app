@@ -1,3 +1,3 @@
 #Requirements
-snowflake-connecter-python 
 pip install -r requirements.txt
+snowflake-connecter-python 
