@@ -1,3 +1,2 @@
 #Requirements
-pip==22.1.2
 snowflake-connecter-python 
