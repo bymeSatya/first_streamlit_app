@@ -1,6 +1,8 @@
 import streamlit
 import pandas
 import requests
+pip install snowflake-connector-python
+import snowflake.connector
 
 streamlit.title('😎This is My streamlit Application')
 streamlit.header('Breakfast Menu')
@@ -24,5 +26,3 @@ fruity_responce=requests.get("https://fruityvice.com/api/fruit/"+fruit_choice)
 #streamlit.text(fruity_responce.json())
 fruity_normalize = pandas.json_normalize(fruity_responce.json())
 streamlit.dataframe(fruity_normalize)
-
-import snowflake.connector
