@@ -1,2 +1,2 @@
 #Requirements
-snowflake-connector-python==1.6.3
+snowflake-connector-python
