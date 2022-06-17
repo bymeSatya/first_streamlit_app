@@ -1,2 +1,2 @@
 #Requirements
-snowflake-connecter-python 
+snowflake-connector-python==22.1.2
