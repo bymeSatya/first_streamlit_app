@@ -32,8 +32,8 @@ try:
   if not fruit_choice:
     streamlit.error("Please select the fruit to get infromation!")
   else:
-    back_from_method=get_fruityvicedata(fruit_choice)
-    streamlit.dataframe(back_from_method)
+    back_from_fruityvice=get_fruityvicedata(fruit_choice)
+    streamlit.dataframe(back_from_fruityvice)
 except URLError as e:
   streamlit.error()
 
@@ -43,15 +43,20 @@ except URLError as e:
 # my_data_row = my_cur.fetchone()
 # streamlit.text("Hello from Snowflake:")
 # streamlit.text(my_data_row)
-streamlit.stop()
+# streamlit.stop()
+# my_data_row = 
+# streamlit.text("My Fruit List:")
 
-my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
-my_cur = my_cnx.cursor()
-my_cur.execute("SELECT * from fruit_load_list")
-my_data_row = my_cur.fetchall()
-streamlit.text("My Fruit List:")
-streamlit.dataframe(my_data_row)
-fruit_add = streamlit.text_input('What Fruit would you like to Add ?')
-streamlit.write('Enter the fruit',fruit_add)
-my_cur.execute("insert into fruit_load_list values("+fruit_add+")")
-streamlit.text("Thanks for Adding Fruit"+fruit_add)
+# fruit_add = streamlit.text_input('What Fruit would you like to Add ?')
+# streamlit.write('Enter the fruit',fruit_add)
+# my_cur.execute("insert into fruit_load_list values("+fruit_add+")")
+# streamlit.text("Thanks for Adding Fruit"+fruit_add)
+
+def get_fruitlist_data():
+    with my_cnx.cursor() as my_cur:
+        my_cur.execute("SELECT * from fruit_load_list")
+        return my_cur.fetchall()
+if streamlit.button("Get Fruit Load List"):
+    my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
+    back_from_fruitload=get_fruitlist_data()
+    streamlit.dataframe(back_from_fruitload)
