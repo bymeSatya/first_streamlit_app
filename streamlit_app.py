@@ -1,6 +1,7 @@
 import streamlit
 import pandas
 import requests
+import setuptools
 import snowflake.connector
 
 streamlit.title('😎This is My streamlit Application')
