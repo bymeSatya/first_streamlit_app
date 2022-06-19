@@ -1,3 +1,4 @@
 # requirements.txt
 pip==22.1.2
+python==3.8
 snowflake-connector-python==1.6.3
