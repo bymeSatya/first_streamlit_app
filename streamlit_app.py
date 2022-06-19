@@ -2,7 +2,6 @@ import streamlit
 import pandas
 import requests
 import setuptools
-from azure.storage.blob import BlockBlobService
 import snowflake.connector
 
 streamlit.title('😎This is My streamlit Application')
