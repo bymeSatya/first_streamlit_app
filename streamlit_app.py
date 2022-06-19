@@ -2,7 +2,6 @@ import streamlit
 import pandas
 import requests
 import setuptools
-import SnowflakeAzureUtil
 import BlockBlobService
 import snowflake.connector
 
